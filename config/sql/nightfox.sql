@@ -40,9 +40,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `role`) VALUES
 (1, 'demo', '$2y$10$euz0MBty3iJpGahPU0c7GuQNcz/1syPIdhwbTMZ7GObs8kSbLD1x2', 'user'),
-(2, 'nightfox', '$2y$10$BWPA294xzFpRAOrhyNU6DeZSWYR9JEPpmm9Zvn6k9dj1mA95.Vtfm', 'user'),
-(3, 'test', '$2y$10$xW0uTjwwOlAfzw.hRKcaOOCBwE4fNam4jszZPEYF19jVjpgPN3ZA6', 'user'),
-(4, 'testt', '$2y$10$ycwW3LK3qnBP1Hg5PDY.HefeB.FMthIobUe2MKhfTZUN88PTGiAkC', 'user');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +59,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

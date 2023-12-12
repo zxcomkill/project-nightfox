@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('config/connection.php');
+include('config/connection.php');
 
 if (!isset($_SESSION['is_logged_in'])) {
   header('location: login.php');
