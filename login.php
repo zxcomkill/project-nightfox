@@ -12,9 +12,9 @@ require_once('config/connect.php');
   <title>Log in</title>
 
   <!-- Bootstrap 5 CSS -->
-  <link href="assets/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- FontAwesome CSS -->
-  <link href="assets/fontawesome-free-6.5.1-web/css/all.min.css" rel="stylesheet" />
+  <link href="assets/vendor/fontawesome-free-6.5.1-web/css/all.min.css" rel="stylesheet" />
   <!-- style CSS -->
   <link href="assets/css/main.css" rel="stylesheet" />
 </head>
@@ -70,7 +70,7 @@ require_once('config/connect.php');
 
 
   <!-- Bootstrap 5 JS -->
-  <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
