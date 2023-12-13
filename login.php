@@ -26,7 +26,7 @@ require_once('config/connect.php');
         <div class="card-body font-light">
           <div class="text-center">
             <i class="fa-solid fa-circle-user" style="color: #7a7fff; font-size:100px;"></i>
-            <h3 class="my-2 font-medium">ยินดีต้อนรับ</h3>
+            <h3 class="my-2 font-medium">Welcome</h3>
           </div>
 
           <!-- Error fill message -->
