@@ -1,6 +1,6 @@
 # Requirement
 
-1. httpd or Apache2
+1. Apache2 or httpd
 2. MariaDB
 3. php7.4+
 
