@@ -20,3 +20,10 @@ if (!isset($_SESSION['is_logged_in'])) {
 
 <!-- footer -->
 <?php include "includes/footer.php"; ?>
+<script>
+  Swal.fire({
+    title: "The Internet?",
+    text: "That thing is still around?",
+    icon: "question"
+  });
+</script>

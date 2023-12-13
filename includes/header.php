@@ -7,11 +7,9 @@
   <title>Welcome Home</title>
 
   <!-- Bootstrap 5 CSS -->
-  <link href="assets/vendor/bootstrap-5.2.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!-- FontAwesome CSS -->
   <link href="assets/vendor/fontawesome-free-6.5.1-web/css/all.min.css" rel="stylesheet" />
-  <!-- SweetAlert2 CSS -->
-  <link href="assets/vendor/sweetalert2-dist/sweetalert2.min.css" rel="stylesheet" />
   <!-- style CSS -->
   <link href="assets/css/main.css" rel="stylesheet" />
 </head>
