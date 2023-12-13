@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('connection.php');
+require_once('connect.php');
 
 if (isset($_POST['submit'])) {
   $username = $_POST['username'];
