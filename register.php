@@ -12,87 +12,70 @@ require_once('config/connect.php');
   <title>Register</title>
 
   <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="assets/vendor/bootstrap@5.2.3/css/bootstrap.min.css" rel="stylesheet">
   <!-- FontAwesome CSS -->
-  <link href="assets/vendor/fontawesome-free-6.5.1-web/css/all.min.css" rel="stylesheet" />
+  <link href="assets/vendor/fontawesome-free-6.5.1-web/css/all.min.css" rel="stylesheet">
   <!-- style CSS -->
-  <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="d-flex align-items-center justify-content-center py-4">
-  <main class="form-login w-100">
+<body>
+  <!-- form login -->
+  <div class="container min-vh-100 d-flex justify-content-center align-items-center">
     <form action="config/register_db.php" method="post">
-      <div class="card">
-        <div class="card-body font-light">
-          <div class="text-center">
-            <i class="fa-solid fa-circle-user" style="color: #7a7fff; font-size:100px;"></i>
-            <h3 class="my-2 font-medium">Sign up</h3>
-          </div>
+      <!-- header -->
+      <div class="text-center">
+        <i class="fa-solid fa-circle-user" style="color: #7a7fff; font-size:100px;"></i>
+        <h3 class="my-4 font-medium">สมัครสมาชิก</h3>
+      </div>
 
-          <!-- Error fill message -->
-          <?php if (isset($_SESSION['error_fill'])) { ?>
-            <div class="alert alert-danger" role="alert">
-              <?php echo $_SESSION['error_fill']; ?>
-            </div>
-          <?php } ?>
-          <!-- Error user exists message -->
-          <?php if (isset($_SESSION['exists_username'])) { ?>
-            <div class="alert alert-danger" role="alert">
-              <?php echo $_SESSION['exists_username']; ?>
-            </div>
-          <?php } ?>
-          <!-- Error password not match message -->
-          <?php if (isset($_SESSION['error_psw'])) { ?>
-            <div class="alert alert-danger" role="alert">
-              <?php echo $_SESSION['error_psw']; ?>
-            </div>
-          <?php } ?>
-          <!-- Error insert message -->
-          <?php if (isset($_SESSION['error_insert'])) { ?>
-            <div class="alert alert-danger" role="alert">
-              <?php echo $_SESSION['error_insert']; ?>
-            </div>
-          <?php } ?>
-
-          <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
-            <label for="floatingInput">Username</label>
-          </div>
-          <div class="form-floating my-1">
-            <input type="password" class="form-control" id="floatingInput" placeholder="Password" name="password">
-            <label for="floatingInput">Password</label>
-          </div>
-          <div class="form-floating">
-            <input type="password" class="form-control" id="floatingInput" placeholder="Password" name="c_password">
-            <label for="floatingInput">Confirm Password</label>
-          </div>
-          <div class="d-flex justify-content-center mt-3">
-            <button type="submit" class="btn btn-primary w-100 py-2" name="submit">Register</button>
-          </div>
+      <!-- content -->
+      <div class="fw-lighter">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
+          <label for="floatingInput">ชื่อผู้ใช้</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingInput" placeholder="Password" name="password">
+          <label for="floatingInput">รหัสผ่าน</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="floatingInput" placeholder="Password" name="c_password">
+          <label for="floatingInput">ยืนยันรหัสผ่าน</label>
         </div>
       </div>
-      <div class="text-center mt-1">
-        <p>Do you have an account? <a href="login.php" class="font-regular">Log in</a></p>
+
+      <!-- footer -->
+      <div class="d-flex justify-content-center mb-1">
+        <button type="submit" class="btn btn-primary w-100 py-2" name="submit">สมัครสมาชิก</button>
+      </div>
+      <div class="d-flex justify-content-center">
+        <p class="fw-lighter me-1">มีบัญชีอยู่แล้ว?</p>
+        <a href="login.php">เข้าสู่ระบบ</a>
       </div>
     </form>
-  </main>
+  </div>
 
 
 
   <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="assets/vendor/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- SweetAlert2 JS -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- FontAwesome JS -->
+  <script src="assets/vendor/fontawesome@6.5.1/js/all.min.js"></script>
 </body>
 
 </html>
 
-<!-- End session message -->
-<?php
-if (isset($_SESSION['error_fill']) || isset($_SESSION['exists_username']) || isset($_SESSION['error_psw']) || isset($_SESSION['error_insert'])) {
-  unset($_SESSION['error_fill']);
-  unset($_SESSION['exists_username']);
-  unset($_SESSION['error_psw']);
-  unset($_SESSION['error_insert']);
-}
-?>
+<!-- Alert message -->
+<?php if (isset($_SESSION['title'])) { ?>
+  <script>
+    Swal.fire({
+      title: "<?php echo $_SESSION['title']; ?>",
+      text: "<?php echo $_SESSION['text']; ?>",
+      icon: "<?php echo $_SESSION['icon']; ?>"
+    })
+  </script>
+<?php unset($_SESSION['title']);
+} ?>

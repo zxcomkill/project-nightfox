@@ -2,8 +2,7 @@
 
 body {
   font-family: "Kanit", sans-serif;
+  height: 1000vh;
 }
 
-a {
-  text-decoration: none;
-}
+/* Style for container */

@@ -8,12 +8,16 @@ if (isset($_POST['submit'])) {
   $c_password = $_POST['c_password'];
 
   if (empty($username) || empty($password) || empty($c_password)) {
-    $_SESSION['error_fill'] = "กรุณากรอกข้อมูลให้ครบถ้วน";
+    $_SESSION['title'] = "ผิดพลาด";
+    $_SESSION['text'] = "กรุณากรอกข้อมูลให้ครบทุกช่อง!";
+    $_SESSION['icon'] = "error";
     header('location: ../register.php');
     exit;
   } else {
     if ($password !== $c_password) {
-      $_SESSION['error_psw'] = "กรุณากรอกรหัสผ่านให้ตรงกัน";
+      $_SESSION['title'] = "ผิดพลาด";
+      $_SESSION['text'] = "รหัสผ่านไม่ตรงกัน!";
+      $_SESSION['icon'] = "error";
       header('location: ../register.php');
       exit;
     } else {
@@ -23,7 +27,9 @@ if (isset($_POST['submit'])) {
       $row = $select_stmt->fetch(PDO::FETCH_ASSOC);
 
       if ($row['count_username'] != 0) {
-        $_SESSION['exists_username'] = "ชื่อผู้ใช้นี้มีอยู่ในระบบแล้ว";
+        $_SESSION['title'] = "ผิดพลาด";
+        $_SESSION['text'] = "ชื่อผู้ใช้นี้มีอยู่ในระบบแล้ว!";
+        $_SESSION['icon'] = "error";
         header('location: ../register.php');
         exit;
       } else {
@@ -38,7 +44,9 @@ if (isset($_POST['submit'])) {
           $_SESSION['is_logged_in'] = true;
           header('location: ../index.php');
         } else {
-          $_SESSION['error_insert'] = "ไม่สามารถนำเข้าข้อมูลได้";
+          $_SESSION['title'] = "ผิดพลาด";
+          $_SESSION['text'] = "เกิดข้อผิดพลาดบางอย่าง...";
+          $_SESSION['icon'] = "error";
           header('location: ../register.php');
           exit;
         }

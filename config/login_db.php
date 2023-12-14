@@ -7,7 +7,9 @@ if (isset($_POST['submit'])) {
   $password = $_POST['password'];
 
   if (empty($username) || empty($password)) {
-    $_SESSION['error_fill'] = "กรุณากรอกข้อมูลให้ครบถ้วน";
+    $_SESSION['title'] = "ผิดพลาด";
+    $_SESSION['text'] = "กรุณากรอกข้อมูลให้ครบทุกช่อง";
+    $_SESSION['icon'] = "error";
     header('location: ../login.php');
     exit;
   } else {
@@ -17,16 +19,21 @@ if (isset($_POST['submit'])) {
     $row = $select_stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($row['count_username'] == 0) {
-      $_SESSION['error_username'] = "ไม่พบชื่อผู้ใช้ในระบบ";
+      $_SESSION['title'] = "ผิดพลาด";
+      $_SESSION['text'] = "ไม่พบชื่อผู้ใช้ในระบบ";
+      $_SESSION['icon'] = "error";
       header('location: ../login.php');
       exit;
     } else {
       if (password_verify($password, $row['password'])) {
         $_SESSION['username'] = $username;
+        $_SESSION['icon'] = "success";
         $_SESSION['is_logged_in'] = true;
         header('location: ../index.php');
       } else {
-        $_SESSION['error_psw'] = "รหัสผ่านไม่ถูกต้อง";
+        $_SESSION['title'] = "ผิดพลาด";
+        $_SESSION['text'] = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";
+        $_SESSION['icon'] = "error";
         header('location: ../login.php');
         exit;
       }
