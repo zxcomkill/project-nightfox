@@ -8,9 +8,8 @@
 <br>
 php-mysql php-cli php-pdo
 
-# Installation
+# Installation for Ubuntu
 
-<b>Ubuntu</br>
 1. sudo apt install -y apache2 mariadb-server php libapache2-mod-php php-{mysql,pdo,cli} git
 2. sudo systemctl enable apache2 / mariadb
 3. sudo ufw allow http / https / openssh
