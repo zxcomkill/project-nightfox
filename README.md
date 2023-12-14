@@ -7,3 +7,7 @@
 <b>Extension for php</b>
 <br>
 php-mysql php-cli php-pdo
+
+# Installation
+
+1. 
