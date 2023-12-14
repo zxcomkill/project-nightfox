@@ -1,10 +1,11 @@
 # Requirement
 
-1. Apache2 or httpd
-2. MariaDB
+1. apache2 or httpd
+2. mariadb-server
 3. php7.4+
+4. net-tools
 
-<b>Extension for php</b>
+<b>Extension php for centos 7</b>
 <br>
 php-mysql php-cli php-pdo
 
