@@ -18,8 +18,11 @@ php-mysql php-cli php-pdo
 5. sudo mysql_secure_installation
 6. sudo mysql -u root -p
  -> CREATE DATABASE nightfox CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+ -> USE nightfox;
+ -> CREATE TABLE `nightfox`.`users` (`user_id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL , `role` VARCHAR(255) NOT NULL , PRIMARY KEY (`user_id`)) ENGINE = 
+    InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
  -> exit;
-7. sudo -i
-8. mysql -uroot -pnightfox < /var/www/html/sql/.sql>
-9. systemctl restart apache2
-10. --> http://domain_or_ip
+8. sudo -i
+9. mysql -uroot -pnightfox < /var/www/html/sql/.sql>
+10. systemctl restart apache2
+11. --> http://domain_or_ip
