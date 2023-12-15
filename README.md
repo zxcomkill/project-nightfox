@@ -16,11 +16,11 @@ php-mysql php-cli php-pdo
 3. sudo ufw allow http / https / openssh
 4. sudo ufw enable
 5. sudo mysql_secure_installation
-6. sudo mysql -u root -p
- -> CREATE DATABASE nightfox CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
- -> USE nightfox;
+6. sudo mysql -u root -p <br>
+ -> CREATE DATABASE nightfox CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci; <br>
+ -> USE nightfox; <br>
  -> CREATE TABLE `nightfox`.`users` (`user_id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL , `role` VARCHAR(255) NOT NULL , PRIMARY KEY (`user_id`)) ENGINE = 
-    InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
- -> exit;
+    InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci; <br>
+ -> exit; <br>
 7. systemctl restart apache2
 8. --> http://domain_or_ip
