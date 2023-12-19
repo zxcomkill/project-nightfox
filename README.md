@@ -43,4 +43,4 @@ php-mysql php-cli php-pdo
 10. --> http://domain_or_ip/
 
 # Add firewall rules port Centos 7
-// sudo firewall-cmd --permanent --add-port= /tcp or udp
+1. sudo firewall-cmd --permanent --add-port= /tcp or udp
