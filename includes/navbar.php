@@ -15,7 +15,7 @@
       </ul>
       <div class="p-1"></div>
       <div class="d-flex justify-content-center">
-        <a href="config/logout.php" class="btn">
+        <a href="config/logout_db.php" class="btn">
           <i class="fa-solid fa-right-from-bracket"></i>
           <span>ออกจากระบบ</span>
         </a>
