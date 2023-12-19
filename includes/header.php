@@ -9,7 +9,7 @@
   <!-- Bootstrap 5 CSS -->
   <link href="assets/vendor/bootstrap@5.2.3/css/bootstrap.min.css" rel="stylesheet">
   <!-- FontAwesome CSS -->
-  <link href="assets/vendor/fontawesome-free-6.5.1-web/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome@6.5.1/css/all.min.css" rel="stylesheet">
   <!-- style CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
